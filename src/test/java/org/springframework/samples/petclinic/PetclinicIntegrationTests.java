@@ -28,7 +28,7 @@ class PetclinicIntegrationTests {
 	private VetRepository vets;
 
 	@Test
-	void testFindAll() throws Exception {
+	void findAll() throws Exception {
 		vets.findAll();
 		vets.findAll(); // served from cache
 	}
