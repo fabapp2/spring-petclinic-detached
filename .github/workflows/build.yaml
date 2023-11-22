@@ -18,5 +18,8 @@ jobs:
           java-version: 17
           cache: 'maven'
 
+      - name: Code Formatting
+        run: mvn spring-javaformat:apply
+
       - name: Maven Build
         run: mvn --batch-mode clean package
