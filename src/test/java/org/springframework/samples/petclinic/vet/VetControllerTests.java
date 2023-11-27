@@ -64,13 +64,13 @@ class VetControllerTests {
 	}
 
 	@Test
-	void testShowVetListHtml() throws Exception {
+	void showVetListHtml() throws Exception {
 		mockMvc.perform(get("/vets.html")).andExpect(status().isOk()).andExpect(model().attributeExists("vets"))
 				.andExpect(view().name("vets/vetList"));
 	}
 
 	@Test
-	void testShowResourcesVetList() throws Exception {
+	void showResourcesVetList() throws Exception {
 		ResultActions actions = mockMvc.perform(get("/vets").accept(MediaType.APPLICATION_JSON))
 				.andExpect(status().isOk());
 		actions.andExpect(content().contentType(MediaType.APPLICATION_JSON))
